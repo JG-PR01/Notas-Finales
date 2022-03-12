@@ -7,11 +7,13 @@ var carrera = prompt(
 	'Ejemplo: Ciencias de la computación.'
 );
 
+//Este diálogo es para recopilar el nombre de la primera rama.
 var rama1 = prompt(
 	'Por favor, ingresa el nombre de tu primera rama',
 	'Ejemplo: matemáticas.'
 );
 
+//Con los tres diálogos siguientes recogemos los datos que son: 1era, 2da y 3era nota de la primera rama.
 var rama1_nota1 = prompt(
 	'Por favor, ingresa tu 1ra nota de' + ' ' + rama1,
 	'Ejemplo: 4'
@@ -27,11 +29,13 @@ var rama1_nota3 = prompt(
 	'Ejemplo: 7'
 );
 
+//Este diálogo es para recopilar el nombre de la segunda rama.
 var rama2 = prompt(
 	'Por favor, ingresa el nombre de tu segunda rama',
 	'Ejemplo: lógica de programación.'
 );
 
+//Con los tres diálogos siguientes recogemos los datos que son: 1era, 2da y 3era nota de la primera rama.
 var rama2_nota1 = prompt(
 	'Por favor, ingresa tu 1ra nota de' + ' ' + rama2,
 	'Ejemplo: 10'
@@ -47,11 +51,13 @@ var rama2_nota3 = prompt(
 	'Ejemplo: 18'
 );
 
+//Este diálogo es para recopilar el nombre de la tercera rama.
 var rama3 = prompt(
 	'Por favor, ingresa el nombre de tu tercera rama',
 	'Ejemplo: inglés.'
 );
 
+//Con los tres diálogos siguientes recogemos los datos que son: 1era, 2da y 3era nota de la primera rama.
 var rama3_nota1 = prompt(
 	'Por favor, ingresa tu 1ra nota de' + ' ' + rama3,
 	'Ejemplo: 4'
@@ -66,6 +72,41 @@ var rama3_nota3 = prompt(
 	'Por favor, ingresa tu 3ra nota de' + ' ' + rama3,
 	'Ejemplo: 7'
 );
+
+//Con los siguientes tres diálogos recopilamos el valor de la nota mínima aprobatoria para cada rama.
+var nota_aprobatoria_rama1 = prompt(
+	'Por favor, ingresa el valor de la nota mínima aprobatoria de' + ' ' + rama1,
+	'Ejemplo: 12'
+);
+
+var nota_aprobatoria_rama2 = prompt(
+	'Por favor, ingresa el valor de la nota mínima aprobatoria de' + ' ' + rama2,
+	'Ejemplo: 12'
+);
+
+var nota_aprobatoria_rama3 = prompt(
+	'Por favor, ingresa el valor de la nota mínima aprobatoria de' + ' ' + rama3,
+	'Ejemplo: 12'
+);
+
+//Aquí definimos como enteros los valores de las variables para las notas de la primera rama.
+rama1_nota1 = parseInt(rama1_nota1);
+rama1_nota2 = parseInt(rama1_nota2);
+rama1_nota3 = parseInt(rama1_nota3);
+
+//Aquí definimos como enteros los valores de las variables para las notas de la segunda rama.
+rama2_nota1 = parseInt(rama2_nota1);
+rama2_nota2 = parseInt(rama2_nota2);
+rama2_nota3 = parseInt(rama2_nota3);
+
+//Aquí definimos como enteros los valores de las variables para las notas de la tercera rama.
+rama3_nota1 = parseInt(rama3_nota1);
+rama3_nota2 = parseInt(rama3_nota2);
+
+//Aquí definimos como enteros los valores de las variables que contienen la nota mínima aprobatoria de cada rama.
+nota_aprobatoria_rama1 = parseInt(nota_aprobatoria_rama1);
+nota_aprobatoria_rama2 = parseInt(nota_aprobatoria_rama2);
+nota_aprobatoria_rama3 = parseInt(nota_aprobatoria_rama3);
 
 //Aquí creamos un div para para unir dos columnas en una sola fila y así agregar los datos personales del usuario.
 document.write('<div class="row row-cols-1 row-cols-md-2 p-4">');
@@ -108,11 +149,11 @@ document.write('<tbody>');
 document.write('<tr>');
 
 //En estas columnas se contienen la 1era rama y sus notas.
-document.write('<th scope="row">1</th>');
-document.write('<td>1</td>');
-document.write('<td>1</td>');
-document.write('<td>1</td>');
-document.write('<td>1</td>');
+document.write('<th scope="row">' + rama1 + '</th>');
+document.write('<td>' + rama1_nota1 + '</td>');
+document.write('<td>' + rama1_nota2 + '</td>');
+document.write('<td>' + rama1_nota3 + '</td>');
+document.write('<td>Promedio</td>');
 
 document.write('</tr>');
 //Cerramos la fila para la primera rama con sus notas.
@@ -121,11 +162,11 @@ document.write('</tr>');
 document.write('<tr>');
 
 //En estas columnas se contienen la segunda rama y sus debidas notas.
-document.write('<th scope="row">2</th>');
-document.write('<td>2</td>');
-document.write('<td>2</td>');
-document.write('<td>2</td>');
-document.write('<td>2</td>');
+document.write('<th scope="row">' + rama2 + '</th>');
+document.write('<td>' + rama2_nota1 + '</td>');
+document.write('<td>' + rama2_nota2 + '</td>');
+document.write('<td>' + rama2_nota3 + '</td>');
+document.write('<td>Promedio</td>');
 
 document.write('</tr>');
 //Cerramos la fila para la segunda rama y sus notas.
@@ -134,11 +175,11 @@ document.write('</tr>');
 document.write('<tr>');
 
 //En estas columnas se contienen la tercera rama con sus dos notas.
-document.write('<th scope="row">3</th>');
-document.write('<td>3</td>');
-document.write('<td>3</td>');
-document.write('<td>3</td>');
-document.write('<td>3</td>');
+document.write('<th scope="row">' + rama3 + '</th>');
+document.write('<td>' + rama3_nota1 + '</td>');
+document.write('<td>' + rama3_nota2 + '</td>');
+document.write('<td>-</td>');
+document.write('<td>Promedio</td>');
 
 document.write('</tr>');
 //Cerramos la tercera fila.
