@@ -68,11 +68,6 @@ var rama3_nota2 = prompt(
 	'Ejemplo: 5'
 );
 
-var rama3_nota3 = prompt(
-	'Por favor, ingresa tu 3ra nota de' + ' ' + rama3,
-	'Ejemplo: 7'
-);
-
 //Con los siguientes tres diálogos recopilamos el valor de la nota mínima aprobatoria para cada rama.
 var nota_aprobatoria_rama1 = prompt(
 	'Por favor, ingresa el valor de la nota mínima aprobatoria de' + ' ' + rama1,
@@ -107,6 +102,11 @@ rama3_nota2 = parseInt(rama3_nota2);
 nota_aprobatoria_rama1 = parseInt(nota_aprobatoria_rama1);
 nota_aprobatoria_rama2 = parseInt(nota_aprobatoria_rama2);
 nota_aprobatoria_rama3 = parseInt(nota_aprobatoria_rama3);
+
+//Con las siguientes tres variables se calculará el promedio de cada rama en base a sus respectivas notas.
+var promedio_rama1 = eval((rama1_nota1 + rama1_nota2 + rama1_nota3) / 3);
+var promedio_rama2 = eval((rama2_nota1 + rama2_nota2 + rama2_nota3) / 3);
+var promedio_rama3 = eval((rama3_nota1 + rama3_nota2) / 3);
 
 //Aquí creamos un div para para unir dos columnas en una sola fila y así agregar los datos personales del usuario.
 document.write('<div class="row row-cols-1 row-cols-md-2 p-4">');
@@ -153,7 +153,7 @@ document.write('<th scope="row">' + rama1 + '</th>');
 document.write('<td>' + rama1_nota1 + '</td>');
 document.write('<td>' + rama1_nota2 + '</td>');
 document.write('<td>' + rama1_nota3 + '</td>');
-document.write('<td>Promedio</td>');
+document.write('<td>' + promedio_rama1 + '</td>');
 
 document.write('</tr>');
 //Cerramos la fila para la primera rama con sus notas.
@@ -166,7 +166,7 @@ document.write('<th scope="row">' + rama2 + '</th>');
 document.write('<td>' + rama2_nota1 + '</td>');
 document.write('<td>' + rama2_nota2 + '</td>');
 document.write('<td>' + rama2_nota3 + '</td>');
-document.write('<td>Promedio</td>');
+document.write('<td>' + promedio_rama2 + '</td>');
 
 document.write('</tr>');
 //Cerramos la fila para la segunda rama y sus notas.
@@ -179,7 +179,7 @@ document.write('<th scope="row">' + rama3 + '</th>');
 document.write('<td>' + rama3_nota1 + '</td>');
 document.write('<td>' + rama3_nota2 + '</td>');
 document.write('<td>-</td>');
-document.write('<td>Promedio</td>');
+document.write('<td>' + promedio_rama3 + '</td>');
 
 document.write('</tr>');
 //Cerramos la tercera fila.
