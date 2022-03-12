@@ -1,16 +1,16 @@
 //Este diálogo es para recopilar el nombre del usuario.
-var nombre = prompt('Hola! ¿Cuál es tu nombre?', 'Ejemplo: Bill Gates.');
+var nombre = prompt('Hola! ¿Cuál es tu nombre?', 'Ejemplo: Bill Gates');
 
 //Este diálogo es para recopilar qué carrera cursa el usuario.
 var carrera = prompt(
 	'Dime, ¿qué carrera cursas?',
-	'Ejemplo: Ciencias de la computación.'
+	'Ejemplo: Ciencias de la computación'
 );
 
 //Este diálogo es para recopilar el nombre de la primera rama.
 var rama1 = prompt(
 	'Por favor, ingresa el nombre de tu primera rama',
-	'Ejemplo: matemáticas.'
+	'Ejemplo: matemáticas'
 );
 
 //Con los tres diálogos siguientes recogemos los datos que son: 1era, 2da y 3era nota de la primera rama.
@@ -32,7 +32,7 @@ var rama1_nota3 = prompt(
 //Este diálogo es para recopilar el nombre de la segunda rama.
 var rama2 = prompt(
 	'Por favor, ingresa el nombre de tu segunda rama',
-	'Ejemplo: lógica de programación.'
+	'Ejemplo: lógica de programación'
 );
 
 //Con los tres diálogos siguientes recogemos los datos que son: 1era, 2da y 3era nota de la primera rama.
@@ -54,7 +54,7 @@ var rama2_nota3 = prompt(
 //Este diálogo es para recopilar el nombre de la tercera rama.
 var rama3 = prompt(
 	'Por favor, ingresa el nombre de tu tercera rama',
-	'Ejemplo: inglés.'
+	'Ejemplo: inglés'
 );
 
 //Con los tres diálogos siguientes recogemos los datos que son: 1era, 2da y 3era nota de la primera rama.
