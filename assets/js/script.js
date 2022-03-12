@@ -84,6 +84,19 @@ var nota_aprobatoria_rama3 = prompt(
 	'Ejemplo: 12'
 );
 
+//En los siguientes tres diálogos recopilamos la nota máxima que se puede alcanzar en cada rama.
+var nota_max_rama1 = prompt(
+	'Por favor, ingresa la nota máxima alcanzable de' + ' ' + rama1
+);
+
+var nota_max_rama2 = prompt(
+	'Por favor, ingresa la nota máxima alcanzable de' + ' ' + rama2
+);
+
+var nota_max_rama3 = prompt(
+	'Por favor, ingresa la nota máxima alcanzable de' + ' ' + rama3
+);
+
 //Aquí definimos como enteros los valores de las variables para las notas de la primera rama.
 rama1_nota1 = parseInt(rama1_nota1);
 rama1_nota2 = parseInt(rama1_nota2);
@@ -195,6 +208,13 @@ document.write('</tbody>');
 
 document.write('</table>');
 //Cerramos la tabla que contiene las tres ramas con sus respectivas notas.
+
+//Establecemos que si la nota faltante (de la tercera rama) es mayor que el puntaje máximo alcanzable, entonces se imprime el siguiente mensaje.
+if (nota_min_faltante_r3 > nota_max_rama3) {
+	document.write(
+		'No puedes aprobar la rama ni tan siquiera alcanzando el máximo puntaje en tu tercera nota de la última rama. Lo siento :('
+	);
+}
 
 //Evaluamos si el valor de la suma de las 2 notas de la tercera rama es menor al total de la suma de las 3 notas aprobatorias mínimas para la misma rama.
 if (suma_notas_rama3 < total_aprobatorias_r3) {
