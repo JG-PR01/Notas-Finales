@@ -127,6 +127,9 @@ var total_aprobatorias_r3 = nota_aprobatoria_rama3 * 3;
 //Esta variable guarda el resultado de la suma de las 2 notas del usuario para la rama 3.
 var suma_notas_rama3 = rama3_nota1 + rama3_nota2;
 
+//Esta variable guarda la nota mínima faltante para aprobar la tercera rama en caso de que no se apruebe con las dos primeras notas.
+var nota_min_faltante_r3 = total_aprobatorias_r3 - suma_notas_rama3;
+
 //Aquí creamos un div para para unir dos columnas en una sola fila y así agregar los datos personales del usuario.
 document.write('<div class="row row-cols-1 row-cols-md-2 p-4">');
 
@@ -209,25 +212,27 @@ document.write('</tbody>');
 document.write('</table>');
 //Cerramos la tabla que contiene las tres ramas con sus respectivas notas.
 
-//Establecemos que si la nota faltante (de la tercera rama) es mayor que el puntaje máximo alcanzable, entonces se imprime el siguiente mensaje.
-if (nota_min_faltante_r3 > nota_max_rama3) {
-	document.write(
-		'No puedes aprobar la rama ni tan siquiera alcanzando el máximo puntaje en tu tercera nota de la última rama. Lo siento :('
-	);
-}
-
 //Evaluamos si el valor de la suma de las 2 notas de la tercera rama es menor al total de la suma de las 3 notas aprobatorias mínimas para la misma rama.
 if (suma_notas_rama3 < total_aprobatorias_r3) {
-	var nota_min_faltante_r3 = total_aprobatorias_r3 - suma_notas_rama3;
-
 	//Si la comparación es verdadera, entonces se imprime por pantalla el mensaje...
+
 	document.write(
-		'Pra aprobar la rama de' +
+		'<p class="ps-4">Para aprobar la rama de' +
 			' ' +
 			rama3 +
 			' ' +
 			'tu 3era nota debe ser de mínimo' +
 			' ' +
-			nota_min_faltante_r3
+			nota_min_faltante_r3 +
+			'.' +
+			'</p>'
+	);
+}
+
+//Establecemos: si la nota faltante (de la tercera rama) es mayor que el puntaje máximo alcanzable, entonces se imprime el siguiente mensaje.
+if (nota_min_faltante_r3 > nota_max_rama3) {
+	document.write(
+		'\n' +
+			'<p class="ps-4"> No puedes aprobar la rama ni tan siquiera alcanzando el máximo puntaje en tu tercera nota de la última rama. Lo siento :( </p>'
 	);
 }
