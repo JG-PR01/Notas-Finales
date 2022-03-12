@@ -1,29 +1,69 @@
 //Este diálogo es para recopilar el nombre del usuario.
-var nombre = prompt('Hola! ¿Cuál es tu nombre?', 'Ejemplo: Bill Gates');
+var nombre = prompt('Hola! ¿Cuál es tu nombre?', 'Ejemplo: Bill Gates.');
 
 //Este diálogo es para recopilar qué carrera cursa el usuario.
 var carrera = prompt(
 	'Dime, ¿qué carrera cursas?',
-	'Ejemplo: Ciencias de la computación'
+	'Ejemplo: Ciencias de la computación.'
 );
 
 var rama1 = prompt(
 	'Por favor, ingresa el nombre de tu primera rama',
-	'Ejemplo: matemáticas'
+	'Ejemplo: matemáticas.'
 );
 
 var rama1_nota1 = prompt(
-	'Por favor ingresa tu primera nota de' + ' ' + rama1,
+	'Por favor, ingresa tu 1ra nota de' + ' ' + rama1,
 	'Ejemplo: 4'
 );
 
 var rama1_nota2 = prompt(
-	'Por favor ingresa tu segunda nota de' + ' ' + rama1,
+	'Por favor ingresa tu 2da nota de' + ' ' + rama1,
 	'Ejemplo: 5'
 );
 
 var rama1_nota3 = prompt(
-	'Por favor ingresa tu tercera nota de' + ' ' + rama1,
+	'Por favor, ingresa tu 3ra nota de' + ' ' + rama1,
+	'Ejemplo: 7'
+);
+
+var rama2 = prompt(
+	'Por favor, ingresa el nombre de tu segunda rama',
+	'Ejemplo: lógica de programación.'
+);
+
+var rama2_nota1 = prompt(
+	'Por favor, ingresa tu 1ra nota de' + ' ' + rama2,
+	'Ejemplo: 10'
+);
+
+var rama2_nota2 = prompt(
+	'Por favor, ingresa tu 2da nota de' + ' ' + rama2,
+	'Ejemplo: 16'
+);
+
+var rama2_nota3 = prompt(
+	'Por favor, ingresa tu 3ra nota de' + ' ' + rama2,
+	'Ejemplo: 18'
+);
+
+var rama3 = prompt(
+	'Por favor, ingresa el nombre de tu tercera rama',
+	'Ejemplo: inglés.'
+);
+
+var rama3_nota1 = prompt(
+	'Por favor, ingresa tu 1ra nota de' + ' ' + rama3,
+	'Ejemplo: 4'
+);
+
+var rama3_nota2 = prompt(
+	'Por favor, ingresa tu 2da nota de' + ' ' + rama3,
+	'Ejemplo: 5'
+);
+
+var rama3_nota3 = prompt(
+	'Por favor, ingresa tu 3ra nota de' + ' ' + rama3,
 	'Ejemplo: 7'
 );
 
