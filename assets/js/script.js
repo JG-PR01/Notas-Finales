@@ -104,9 +104,28 @@ nota_aprobatoria_rama2 = parseInt(nota_aprobatoria_rama2);
 nota_aprobatoria_rama3 = parseInt(nota_aprobatoria_rama3);
 
 //Con las siguientes tres variables se calculará el promedio de cada rama en base a sus respectivas notas.
-var promedio_rama1 = eval((rama1_nota1 + rama1_nota2 + rama1_nota3) / 3);
-var promedio_rama2 = eval((rama2_nota1 + rama2_nota2 + rama2_nota3) / 3);
-var promedio_rama3 = eval((rama3_nota1 + rama3_nota2) / 3);
+var promedio_rama1 = (rama1_nota1 + rama1_nota2 + rama1_nota3) / 3;
+var promedio_rama2 = (rama2_nota1 + rama2_nota2 + rama2_nota3) / 3;
+var promedio_rama3 = (rama3_nota1 + rama3_nota2) / 3;
+
+var total_aprobatorias_r3 = nota_aprobatoria_rama3 * 3;
+
+var promedio_aprobatorio_rama3 = total_aprobatorias_r3 / 3;
+
+var suma_notas_rama3 = rama3_nota1 + rama3_nota2;
+
+if (suma_notas_rama3 < total_aprobatorias_r3) {
+	var nota_min_faltante_r3 = suma_notas_rama3 - total_aprobatorias_r3;
+	document.write(
+		'Pra aprobar la rama de' +
+			' ' +
+			rama3 +
+			' ' +
+			'tu 3era nota debe ser de mínimo' +
+			' ' +
+			nota_min_faltante_r3
+	);
+}
 
 //Aquí creamos un div para para unir dos columnas en una sola fila y así agregar los datos personales del usuario.
 document.write('<div class="row row-cols-1 row-cols-md-2 p-4">');
