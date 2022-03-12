@@ -215,7 +215,6 @@ document.write('</table>');
 //Evaluamos si el valor de la suma de las 2 notas de la tercera rama es menor al total de la suma de las 3 notas aprobatorias mínimas para la misma rama.
 if (suma_notas_rama3 < total_aprobatorias_r3) {
 	//Si la comparación es verdadera, entonces se imprime por pantalla el mensaje...
-
 	document.write(
 		'<p class="ps-4">Para aprobar la rama de' +
 			' ' +
