@@ -108,24 +108,11 @@ var promedio_rama1 = (rama1_nota1 + rama1_nota2 + rama1_nota3) / 3;
 var promedio_rama2 = (rama2_nota1 + rama2_nota2 + rama2_nota3) / 3;
 var promedio_rama3 = (rama3_nota1 + rama3_nota2) / 3;
 
+//Esta variable guarda el resultado de la suma de las 3 notas aprobatorias mínimas para la tercera rama.
 var total_aprobatorias_r3 = nota_aprobatoria_rama3 * 3;
 
-var promedio_aprobatorio_rama3 = total_aprobatorias_r3 / 3;
-
+//Esta variable guarda el resultado de la suma de las 2 notas del usuario para la rama 3.
 var suma_notas_rama3 = rama3_nota1 + rama3_nota2;
-
-if (suma_notas_rama3 < total_aprobatorias_r3) {
-	var nota_min_faltante_r3 = suma_notas_rama3 - total_aprobatorias_r3;
-	document.write(
-		'Pra aprobar la rama de' +
-			' ' +
-			rama3 +
-			' ' +
-			'tu 3era nota debe ser de mínimo' +
-			' ' +
-			nota_min_faltante_r3
-	);
-}
 
 //Aquí creamos un div para para unir dos columnas en una sola fila y así agregar los datos personales del usuario.
 document.write('<div class="row row-cols-1 row-cols-md-2 p-4">');
@@ -208,3 +195,19 @@ document.write('</tbody>');
 
 document.write('</table>');
 //Cerramos la tabla que contiene las tres ramas con sus respectivas notas.
+
+//Evaluamos si el valor de la suma de las 2 notas de la tercera rama es menor al total de la suma de las 3 notas aprobatorias mínimas para la misma rama.
+if (suma_notas_rama3 < total_aprobatorias_r3) {
+	var nota_min_faltante_r3 = suma_notas_rama3 - total_aprobatorias_r3;
+
+	//Si la comparación es verdadera, entonces se imprime por pantalla el mensaje...
+	document.write(
+		'Pra aprobar la rama de' +
+			' ' +
+			rama3 +
+			' ' +
+			'tu 3era nota debe ser de mínimo' +
+			' ' +
+			nota_min_faltante_r3
+	);
+}
