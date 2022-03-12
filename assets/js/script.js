@@ -86,15 +86,18 @@ var nota_aprobatoria_rama3 = prompt(
 
 //En los siguientes tres diálogos recopilamos la nota máxima que se puede alcanzar en cada rama.
 var nota_max_rama1 = prompt(
-	'Por favor, ingresa la nota máxima alcanzable de' + ' ' + rama1
+	'Por favor, ingresa la nota máxima alcanzable de' + ' ' + rama1,
+	'Ejemplo: 20'
 );
 
 var nota_max_rama2 = prompt(
-	'Por favor, ingresa la nota máxima alcanzable de' + ' ' + rama2
+	'Por favor, ingresa la nota máxima alcanzable de' + ' ' + rama2,
+	'Ejemplo: 20'
 );
 
 var nota_max_rama3 = prompt(
-	'Por favor, ingresa la nota máxima alcanzable de' + ' ' + rama3
+	'Por favor, ingresa la nota máxima alcanzable de' + ' ' + rama3,
+	'Ejemplo: 20'
 );
 
 //Aquí definimos como enteros los valores de las variables para las notas de la primera rama.
